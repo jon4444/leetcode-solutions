@@ -1,12 +1,12 @@
 # from collections import Counter
 class Solution:
     def numIdenticalPairs(self, nums: List[int]) -> int:
-        freq = {}
-        res = 0
-        for num in nums:
-            if num in freq:
+        freq = {} 
+        res = 0  # to store the count
+        for num in nums:  # loop through list
+            if num in freq: 
                 res += freq[num]
-                freq[num] += 1
+                freq[num] += 1   # if there is an occurrence of a pair of similar values, add the count to the result 
             else:
-                freq[num] = 1
-        return res
+                freq[num] = 1  
+        return res     # return result
